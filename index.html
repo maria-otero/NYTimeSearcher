@@ -5,49 +5,128 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,400,700|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="asset/css.css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-  
-    <!-- Google fonts-->
-    
-    <!-- style.css -->
-    <style>
-      
-      body {
-        
-      }
-      
-      h1 {
-        font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-weight: bold;
-        font-size: 68px;
-        text-align: center;
-      }
-      
-      p {
-        font-family: 'Gothic A1', sans-serif;
-      }
-      
-    </style>
-  
   </head>
   
   
   <body>
     <div class="container">
-      
-    
-      
-      
-      
-      
-      <div id="articleField"></div>
+     
+      <!--Jumboron Title-->
+      <div class = "jumbotron">
+        <h1><strong><span class = "glyphicon glyphicon-globe"></span>New York Times Search</strong></h1>
+      </div>
+      <!--Searching Section-->
+      <div class = "row">
+        <div class="col-sm-12">
+          <br>
+          <!--Panel Section-->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class = "panel-title">
+                  <i class="far fa-newspaper"></i><strong>Search Parameters</strong>
+              </h3>
+            </div>
+            <!--Panel body-->
+            <div class = "panel-body">
+              <form role = "form">
+                <div class = "form-group">
+                  <label for = "search">Search Term:</label>
+                  <input type = "text" class = "form-control" id = "termInput">
+                </div>
+                <div class = "form-group">
+                  <label for = "pwd">Number of Records to Retrieve:</label>
+                  <select form = "form-control" id = "numInput">
+                    <option value = "1">1</option>
+                    <option value = "3">3</option>
+                    <option value = "5">5</option>
+                    <option value = "10">10</option>
+                  </select>
+                </div>
+                <div class = "form-group">
+                  <label for = "start-year">Start Year (Optional):</label>
+                  <input type = "text" class = "form-control" id = "startInput">
+                </div>
+                <div class = "form-group">
+                  <label for = "end-year">End Year (Optional):</label>
+                  <input type = "text" class = "form-control" id = "endInput">
+                </div>
+              <!--button-->
+                <button type ="submit" class = "btn btn-default" id = "formSearch">
+                  Search
+                </button>
+                <button type ="button" class = "btn btn-default" id = "formClear">
+                  Clear Results
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--article section-->
+      <div class = "row">
+        <div class = "col-sm-12">
+          <br>
+          <!--panel section-->
+          <div class = "panel-heading" >
+            <h3 class = "panel-title">
+                <i class="fab fa-pied-piper-pp"></i><strong>Top Article</strong>
+            </h3>
+          </div>
+          <!--main panel body-->
+          <div class = "panel-body" id = "articleField">
+            <div class = "post" id = "articleField-1">
+              <h4 class = "articleHeadline">
+                <span class = "label label-primary">1</span>
+                <strong>Internet Capital Group Inc.</strong>
+              </h3>
+            </div>
+            <div class = "post" id = "articleField-2">
+              <h4 class = "articleHeadline">
+                <span class = "label label-primary">2</span>
+                <strong>Internet Capital Group Inc.</strong>
+              </h3>
+            </div>
+            <div class = "post" id = "articleField-3">
+              <h4 class = "articleHeadline">
+                <span class = "label label-primary">3</span>
+                <strong>Internet Capital Group Inc.</strong>
+              </h3>
+            </div>
+            <div class = "post" id = "articleField-4">
+              <h4 class = "articleHeadline">
+                <span class = "label label-primary">4</span>
+                <strong>Internet Capital Group Inc.</strong>
+              </h3>
+            </div>
+            <div class = "post" id = "articleField-5">
+              <h4 class = "articleHeadline">
+                <span class = "label label-primary">5</span>
+                <strong>Internet Capital Group Inc.</strong>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer Section-->
+      <div class = "row">
+        <div class = "col-sm-12">
+          <hr>
+          <h5 class = "text-center">
+            <small>Made by Jerauld, Jesse, Maria and Zhiye</small>
+          </h5>
+        </div>
+      </div>
+     
+      <!--Footer Section ends-->
       
       
     </div>
@@ -55,6 +134,7 @@
     <!-- Optional JavaScript -->
     <script src="script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   </body>
 </html>

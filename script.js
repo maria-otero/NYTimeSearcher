@@ -29,15 +29,16 @@ $('#formSearch').on('click', function (event) {
         console.log(response);
         for (let i=0; i<10; i++) {
             var newDiv = $('<div>')
-            newDiv.css('background', 'lightgrey')
+            newDiv.addClass('newDiv-style');
+            
 
             //APPENDING NUMBER
-            var articleNum = $('<h3>');
+            var articleNum = $('<h6>');
             articleNum.text(i+1).addClass('article-number');
             newDiv.append(articleNum);
 
             //APPENDING HEADLINE
-            var newHeadline = $('<h3>');
+            var newHeadline = $('<h4>');
             newHeadline.text(response.response.docs[i].headline.main).addClass('article-headline');
             newDiv.append(newHeadline);
 

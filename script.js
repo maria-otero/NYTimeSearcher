@@ -20,7 +20,7 @@ $('#formSearch').on('click', function (event) {
     endInput = endInput + '1231';
     
     //BUILD SEARCH URL
-    var searchURL = `http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=769ae556259949f9bb72bf4556f8d25c&q=${searchInput}&begin_date=${startInput}&end_date=${endInput}`
+    var searchURL = `http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=[API KEY]&q=${searchInput}&begin_date=${startInput}&end_date=${endInput}`
 
     $.ajax ({
        url: searchURL,
